@@ -1,0 +1,31 @@
+<div class="productbg p-5 text-light">
+    <p class="h1 text-center mb-5"> Add Order</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-lg-10">
+                <input
+                type="text"
+                placeholder="Enter Course Name"
+                class="from-control"
+                [value]="inputValue"
+                [(ngModel)]="inputValue"
+                
+                />
+               
+            </div>
+            <div class="col-sm-4 col-lg-2">
+                <button class="w-100 d-block btn btn-outline-warning" (click)="addToList()">+</button>
+            </div>
+        </div>
+        <div class="row mt-5" *ngFor="let todo of todoList; let i = index">
+            <div 
+             class="col-lg-10 p-3 text-light bg-secondary rounded text-dark">
+               {{ todo }}
+            </div>
+            <div class="col-lg-2">
+                <button class="btn btn-danger p-3 w-100 d-block" (click)="remove(i)">-</button>
+            </div>
+        </div>
+
+    </div>
+</div>

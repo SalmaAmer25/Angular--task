@@ -1,0 +1,20 @@
+<div class="productbg p-5">
+    <div class="container text-light">
+     <h1 class ="text-center text-dark mb-3">Our Courses</h1>
+     <button class="btn btn-outline-warning mx-3"
+     *ngFor="let x of categories; let i =index">  {{ x }}</button>
+    
+     <div class="row g-3 my-5">
+      <app-product-item 
+      *ngFor="let product of products" 
+      class="col-sm-6 col-lg-3"></app-product-item>
+     
+      
+        
+  
+    </div>
+    </div>
+
+</div>
+
+
